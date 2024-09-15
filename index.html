@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayush - Developer Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background: url(Assests/bgColor.avif) no-repeat;
+            background-size: cover;
+            color: white;
+            font-family: 'Poppins',sans-serif;
+            padding-bottom: 9vh;
+        }
+        header {
+            position: sticky;
+            z-index: 2;
+            top: 0;
+        }
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 90px;
+            /* background: linear-gradient(to right, rgba(13, 13, 50, 0.5), rgb(13, 13, 50), rgb(13, 13, 50)); */
+            background: rgba(13, 13, 50, 0.7);
+        }
+        nav ul {
+            display: flex;
+            justify-content: center;
+        }
+        nav ul li {
+            list-style: none;
+            margin: 0 23px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+        }
+        nav ul li a:hover {
+            color: rgb(134, 134, 216);
+        }
+        .left {
+            font-size: 1.5rem;
+        }
+        .firstSection {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            margin: 90px 0;
+        }
+        .firstSection > div {
+            width: 30%;
+        }
+        .leftSection {
+            font-size: 2.5rem;
+        }
+        .rightSection img {
+            width: 80%;
+        }
+        .img {
+            height: 24rem;
+            width: 24rem;
+            background: url(Assests/main\ \(1\).png) no-repeat;
+            background-size: cover;
+            border-radius: 50%;
+            border: 5px solid;
+            border-color: darkblue;
+            box-shadow: 0 0 20px lightgreen,
+                        0 0 40px lightblue,
+                        0 0 80px blue,
+                        0 0 160px darkblue;
+        }
+        .purple {
+            color: rgb(170, 107, 228);
+        }
+        #container {
+            color: rgb(170, 107, 228);
+        }
+        main hr {
+            border: 0;
+            height: 1px;
+            background: #9c97f1;
+            margin: 40px 84px;
+        }
+        .secondSection, .thirdSection, .fourthSection, .fifthSection {
+            max-width: 80vw;
+            margin: auto;
+            height: 80vh;
+        }
+        .secondSection h1, .thirdSection h1, .fourthSection h1, .fifthSection h1 {
+            font-size: 1.9rem;
+        }
+        .gray {
+            color: gray;
+        }
+        .thirdSection .container, .fourthSection .container, .fifthSection .container, .secondSection .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 80%;
+        }
+        .thirdSection .container .box, .fifthSection .container .box {
+            height: 60%;
+            width: 26.5%;
+            padding: 30px 30px;
+            box-shadow: 0 0 10px rgb(49, 49, 235),
+                        0 0 20px rgb(49, 49, 235),
+                        0 0 40px rgb(49, 49, 235);
+        }
+        .fourthSection .container .box, .secondSection .container .box {
+            height: 90%;
+            width: 44%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 2rem;
+        }
+        .fourthSection .container .box h2 {
+            text-decoration: underline;
+            text-underline-offset: 8px;
+            text-decoration-thickness: 5px;
+        }
+        .fourthSection .container .box div {
+            display: flex;
+            gap: 0.6rem;
+            width: 100%;
+            align-items: center;
+            justify-content: right;
+        }
+        .slide {
+            height: 5px;
+            width: 65%;
+            border-radius: 10px;
+        }
+        .fourthSection .container .box div span:last-child {
+            margin-left: -0.6rem;
+        }
+        .toTop {
+            height: 2.5rem;
+            width: 2.5rem;
+            font-size: 1.5rem;
+            color: white;
+            background: black;
+            position: fixed;
+            bottom: 5%;
+            right: 5%;
+        }
+        footer {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            align-items: center;
+            justify-content: center;
+        }
+        footer input {
+            height: 2rem;
+            width: 50%;
+            border-radius: 0.5rem;
+            padding: 0.5rem;
+        }
+        footer textarea {
+            width: 50%;
+            height: 6rem;
+            padding: 0.5rem;
+            border-radius: 0.5rem;
+        }
+        footer .contacts {
+            display: flex;
+            gap: 2rem;
+        }
+        footer .contacts a {
+            height: 50%;
+            width: 50%;
+            background: aqua;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .cv {
+            height: 2.5rem;
+            width: 9rem;
+            background: none;
+            color: white;
+            border: 2px solid white;
+            border-radius: 0.3rem;
+            cursor: pointer;
+        }
+        .cv:hover {
+            border-color: rgb(170, 167, 167);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="left"><strong>Ayush's Portfolio</strong></div>
+            <div class="right">
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#service">Services</a></li>
+                    <li><a href="#skill">Skills</a></li>
+                    <li><a href="#project">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="firstSection">
+            <div class="leftSection">
+                Hi, My name is <span class="purple">Ayush</span>
+                <div>and I am a passionate</div>
+                <div>java Developer</div>
+                <div id="container">
+                    <div class="flip" id="text-container"></div>
+                </div>
+                <button onclick="showCV()" class="cv">View Resume</button>
+            </div>
+            <div class="rightSection">
+                <div class="img"></div>
+            </div>
+        </section>
+        <hr>
+        <section class="secondSection" id="about">
+            <span class="gray">What I have done so far</span>
+            <h1 class="purple">About me</h1>
+            <div class="container">
+                <div class="box">
+                    <img src="Assests/pic.png" alt="">
+                </div>
+                <div class="box">
+                    <h2>Java Full-stack Developer</h2>
+                    <p>As a full-stack Java developer, I am passionate about creating robust and dynamic web applications. With a solid foundation in HTML, CSS, JavaScript, and React, I bring a strong front-end skill set complemented by extensive knowledge of Java, SQL, and JDBC for backend development. I have completed a comprehensive six-month training program at QSpider Noida, where I honed my skills and gained practical experience in both front-end and back-end technologies. I am eager to leverage my skills in a professional environment, contribute to innovative projects, and continue growing as a developer. My goal is to build scalable, efficient, and user-centric solutions that drive success and deliver exceptional user experiences.</p>
+                </div>
+            </div>
+        </section>
+        <hr>
+        <section class="thirdSection" id="service">
+            <h1 class="purple">My Services</h1>
+            <div class="container">
+                <div class="box">
+                    <strong style="font-size: 2rem;"><span><</span><span>/></span></strong>
+                    <h2>Frontend Design</h2>
+                    <p>Frontend design focuses on creating the visual and interactive aspects of websites and applications. It involves using HTML, CSS, and JavaScript to build user interfaces that are both functional and aesthetically pleasing.</p>
+                </div>
+                <div class="box">
+                    <img src="Assests/java.png" alt="" height="40px">
+                    <h2>Java Applications</h2>
+                    <p>Java applications are versatile software programs built using the Java programming language. They can run on various platforms, offering cross-platform compatibility, robust performance, and scalability for everything from desktop to web and mobile applications.</p>
+                </div>
+                <div class="box">
+                    <img src="Assests/database.png" alt="" height="40px">
+                    <h2>Database Management</h2>
+                    <p>Database design and management involve structuring data efficiently, ensuring data integrity, and optimizing performance. It includes defining schemas, relationships, and indexes, as well as maintaining and securing databases to support reliable and scalable information systems.</p>
+                </div>
+            </div>
+        </section>
+        <hr>
+        <section class="fourthSection" id="skill">
+            <h1 class="purple">My Skills</h1>
+            <div class="container">
+                <div class="box">
+                    <h2>Technical Skills</h2>
+                    <div>
+                        <span>HTML</span><br><span class="slide"></span><span class="value">90</span><span>%</span>
+                    </div>
+                    <div>
+                        <span>CSS</span><span class="slide"></span><span class="value">70</span><span>%</span>
+                    </div>
+                    <div>
+                        <span>JavaScript</span><span class="slide"></span><span class="value">65</span><span>%</span>
+                    </div>
+                    <div>
+                        <span>JAVA</span><span class="slide"></span><span class="value">60</span><span>%</span>
+                    </div>
+                    <div>
+                        <span>SQL</span><span class="slide"></span><span class="value">70</span><span>%</span>
+                    </div>
+                </div>
+                <div class="box">
+                    <h2>Professional Skills</h2>
+                    <div>
+                        <span>Creativity</span><br><span class="slide"></span><span class="value">80</span><span>%</span>
+                    </div>
+                    <div>
+                        <span>Communication</span><span class="slide"></span><span class="value">55</span><span>%</span>
+                    </div>
+                    <div>
+                        <span>Problem Solving</span><span class="slide"></span><span class="value">90</span><span>%</span>
+                    </div>
+                    <div>
+                        <span>Team Work</span><span class="slide"></span><span class="value">75</span><span>%</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <hr>
+        <section class="fifthSection" id="project">
+            <h1 class="purple">My Projects</h1>
+            <div class="container">
+                <div class="box">
+                    <h2>Hospital Management System</h2>
+                    <p>The hospital management system, built with Java and MySQL, allows users to add and view patient and doctor information, and schedule appointments. It streamlines hospital operations with efficient data management and appointment scheduling.</p>
+                    <a href="https://github.com/ayushsoni9112/HospitalManagement.git" target="_blank">Get Source Code</a>
+                </div>
+                <div class="box">
+                    <h2>Amazon Clone</h2>
+                    <p>I have developed a UI clone of the Amazon website, replicating its design and layout. This project focuses on the visual aspects, including navigation, product displays, and overall user interface aesthetics.</p>
+                </div>
+            </div>
+        </section>
+        <hr>
+    </main>
+    <footer id="contact">
+        <h1 style="margin-left: -70%;"><span class="purple">Contact me</span></h1>
+        <input type="text" placeholder="Enter Your Name">
+        <input type="text" placeholder="Enter Your Email">
+        <input type="text" placeholder="Enter Your Subject">
+        <textarea name="" id="" placeholder="Enter Your Massage"></textarea>
+        <button onclick="showMsg()" style="height: 2.5rem; width: 51%; background: aqua; font-family: 'arial black'; font-size: 1.1rem; border-radius: 0.5rem;">Submit</button>
+        <div class="contacts">
+            <a href="https://www.instagram.com/mr___satyamsoni/" target="_blank"><img src="Assests/instagram.png" alt="" height="50px"></a>
+            <a href="https://www.linkedin.com/in/ayush-ayush-9908482a0/" target="_blank"><img src="Assests/linkdin.png" alt="" height="50px"></a>
+            <a href="https://github.com/ayushsoni9112" target="_blank"><img src="Assests/github.png" alt="" height="50px"></a>
+            <a href="https://leetcode.com/u/ayush__kumar/" target="_blank"><img src="Assests/leetcode.png" alt="" height="50px"></a>
+            <a href="https://www.hackerrank.com/profile/kkumarsatyam35" target="_blank"><img src="Assests/hack.png" alt="" height="50px"></a>
+        </div>
+    </footer>
+    <button onclick="window.location.href='index.html'" class="toTop">▲</button>
+    <script src="script.js"></script>
+</body>
+</html>
